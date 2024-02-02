@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_documentation/transation/fade_transation.dart';
 
 /// Flutter code sample for [AnimatedContainer].
 
@@ -57,7 +58,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
             ),
             ElevatedButton.icon(
               onPressed: () {
-                print('Ok');
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const FadeTransationExampleApp()));
               },
               icon: const Icon(Icons.navigation),
               label: const Text('Next Page '),

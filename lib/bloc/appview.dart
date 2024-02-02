@@ -51,6 +51,7 @@ class CounterView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           FloatingActionButton(
+            heroTag: 'one',
             child: const Icon(Icons.add),
             onPressed: () {
               context.read<CounterBloc>().add(CounterIncrementPressed());
@@ -58,6 +59,7 @@ class CounterView extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           FloatingActionButton(
+            heroTag: 'hi',
             child: const Icon(Icons.remove),
             onPressed: () {
               context.read<CounterBloc>().add(CounterDecrementPressed());
@@ -65,6 +67,7 @@ class CounterView extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           FloatingActionButton(
+            heroTag: 'bye',
             child: const Icon(Icons.brightness_6),
             onPressed: () {
               context.read<ThemeCubit>().toggleTheme();
@@ -72,6 +75,7 @@ class CounterView extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           FloatingActionButton(
+            heroTag: 'ok',
             child: const Icon(Icons.remove),
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context)=> const AlignAnimationScreen()));
