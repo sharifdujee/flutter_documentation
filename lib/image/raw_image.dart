@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_documentation/card/card_view.dart';
+import 'package:flutter_documentation/layout/single_layout.dart';
+import 'package:flutter_documentation/table/horizontal_data_table.dart';
 class RawImageScreen extends StatefulWidget {
   const RawImageScreen({super.key});
 
@@ -8,6 +10,8 @@ class RawImageScreen extends StatefulWidget {
 }
 
 class _RawImageScreenState extends State<RawImageScreen> {
+  get user => user;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +38,10 @@ class _RawImageScreenState extends State<RawImageScreen> {
             ),
             ElevatedButton.icon(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=> const CardViewScreen()));
-            }, icon: const Icon(Icons.card_membership), label: const Text('Card'))
+            }, icon: const Icon(Icons.card_membership), label: const Text('Card')),
+            ElevatedButton.icon(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>    const SingleLayoutScreen()));
+            }, icon: const  Icon(Icons.directions_railway), label: const Text('Layout')),
           ],
         ),
 

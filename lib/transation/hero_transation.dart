@@ -17,8 +17,9 @@ class _HeroTransationAppState extends State<HeroTransationApp> {
   }
 }
 class BoxWidget extends StatelessWidget {
-  const BoxWidget({super.key, required this.size, required Color color});
+  const BoxWidget({super.key, required this.size,  required this.color});
   final Size size;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
